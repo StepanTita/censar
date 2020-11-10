@@ -1,0 +1,23 @@
+{% load static %}
+
+{% block download %}
+    <div class="basic-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h3>Download Leno today to see the benefits and enjoy the results faster than any other app out
+                            there</h3>
+                        <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>For iOS</a>
+                        <a class="btn-solid-lg" href="#your-link"><i class="fab fa-google-play"></i>For Android</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="{% static 'images/download.png' %}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+{% endblock %}

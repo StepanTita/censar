@@ -1,0 +1,21 @@
+{% load static %}
+
+{% block header %}
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h1>APPLICATION <br>FOR <span id="js-rotating">GAMERS, STREAMERS, PEOPLE</span></h1>
+                        <p class="p-large">Censar is one of the most useful and needed applications, for all kinds of the content makers!</p>
+                        <a class="btn-solid-lg" href="#your-link"><i class="fab fa-twitch"></i>For Twitch</a>
+                        <a class="btn-solid-lg" href="#your-link"><i class="fab fa-youtube"></i>For YouTube</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="{% static 'images/mobile4.png' %}" alt="alternative">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+{% endblock %}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+{% include "navigation.html" %}
+
+
+<!-- Header -->
+<header class="ex-header bg-dark-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                {#                    <h1>Contact info</h1>#}
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+
+{#    <!-- Form -->#}
+{#    <div class="ex-form-1 pt-6 pb-5">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-xl-10 offset-xl-1">#}
+{#                    <p class="mb-5">We love to create dependable business are solutions for small and medium sized word companies. Email our office using <a href="mailto:contact@leno.com">contact@leno.com</a> or call us using <a href="tel:123-456-7890">+123-456-7890</a></p>#}
+{#                    #}
+{#                    <!-- Contact Form -->#}
+{#                    <form id="contactForm" class="mb-6" data-toggle="validator" data-focus="false" action="{% url 'result' %}" method="post">#}
+{#                        {% csrf_token %}#}
+{#                        {{ form.as_p }}#}
+{#                        <div class="form-group">#}
+{#                            <button type="submit" class="form-control-submit-button">Submit Message</button>#}
+{#                        </div>#}
+{#                        <div class="form-message">#}
+{#                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>#}
+{#                        </div>#}
+{#                    </form>#}
+{#                    <!-- end of contact form -->#}
+{##}
+{#                </div> <!-- end of col -->#}
+{#            </div> <!-- end of row -->#}
+{#        </div> <!-- end of container -->#}
+{#    </div> <!-- end of ex-form-1 -->#}
+{#    <!-- end of form -->#}
+
+<!-- form2 -->
+<form class="mb-6" action="{% url 'images' %}"
+      method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="file-upload">
+        <div class="form-group">
+            <button type="button" onclick="$('.file-upload-input').trigger( 'click' )"
+                    class="form-control-submit-button"><h4 class="upload-text">Upload File</h4>
+            </button>
+        </div>
+        {#      <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>#}
+
+        <div class="image-upload-wrap">
+            {{ form.images }}
+{#            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*"/>#}
+            <div class="drag-text">
+                <h3>Drag and drop a file or select add Image</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" src="#" alt="your image"/>
+            <div class="image-title-wrap">
+                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group col-lg-3 submit-images">
+            <input type="submit" class="form-control-submit-button">Submit Message</input>
+        </div>
+    </div>
+</form>
+<!-- end-form2 -->
+
+
+{% include "footer.html" %}
+
+{% include "js.html" %}
+</body>
+</html>
